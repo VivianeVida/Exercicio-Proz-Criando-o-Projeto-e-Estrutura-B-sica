@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6A4C93; /* Cor roxa similar à da imagem */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF6F00; /* Cor laranja similar à da imagem */
+    color: #fff;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    color: #6A4C93;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
