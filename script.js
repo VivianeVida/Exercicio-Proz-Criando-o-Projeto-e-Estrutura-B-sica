@@ -1,24 +1,30 @@
-// Método simples: Usando innerHTML
-const titulo = document.getElementById('titulo');
-titulo.innerHTML = 'Bem-vindo à minha loja!';
+// Criando um elemento para o título
+let titulo = document.createElement("h1");
 
-// Criando o produto
-const produto = document.createElement('div');
-produto.classList.add('produto');
+// Manipulando o elemento
+titulo.id = "titulo";
+titulo.innerText = "Loja de vendas de Smartphone";
 
-const nomeProduto = document.createElement('h2');
-nomeProduto.textContent = 'Smartphone Top';
+// Capturando o "elemento pai" dos elementos 'titulo' e 'produto'
+let body = document.querySelector("body");
 
-const descricaoProduto = document.createElement('p');
-descricaoProduto.textContent = 'O melhor smartphone do mercado!';
+// Adicionando o elemento 'titulo' no DOM
+body.appendChild(titulo);
 
-const precoProduto = document.createElement('p');
-precoProduto.textContent = 'R$ 3.000,00';
+// ------------------------------------------- //
 
-// Adicionando os elementos filhos ao produto
-produto.appendChild(nomeProduto);
-produto.appendChild(descricaoProduto);
-produto.appendChild(precoProduto);
+// Criando um elemento para o produto
+let produto = document.createElement("div");
 
-// Adicionando o produto ao corpo
-document.body.appendChild(produto);
+// Manipulando o elemento
+produto.innerHTML = `
+  <div>
+    <h2>Smartphone</h2>
+    <img src="https://techinter.com.br/wp-content/uploads/2023/11/melhores-celulares-da-atualidade.jpg" alt="x-salada">
+    <p>Smartphone Xiaomi Redmi Note 13 Pro 5G 8GB+256GB Snapdragon 7s Gen 2, Câmera 200MP OIS, Carregamento Turbo 67W, 120Hz, AMOLED, NFC... (Preto).</p>
+    <p id="preco-x-salada">R$1.899,00</p>
+  </div>
+`;
+
+// Adicionando o elemento no dom
+body.appendChild(produto)
